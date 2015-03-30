@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/Connectors</base>
+  <class>Connector</class>
+  <name>civicrm_connector</name>
+  <comment>Connector</comment>
+  <add>1.0</add>
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Connector ID</comment>
+    <add>1.0</add>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+  <field>
+    <name>domain_id</name>
+    <title>Domain ID</title>
+    <type>int unsigned</type>
+    <required>false</required>
+    <comment>Optional FK to Domain ID</comment>
+    <add>1.0</add>
+  </field>
+  <foreignKey>
+    <name>domain_id</name>
+    <table>civicrm_domain</table>
+    <key>id</key>
+    <add>1.0</add>
+    <onDelete>RESTRICT</onDelete>
+  </foreignKey>
+  <field>
+    <name>name</name>
+    <type>varchar</type>
+    <length>64</length>
+    <comment>Connector name (by front end user)</comment>
+    <add>1.0</add>
+  </field>
+  <field>
+    <name>description</name>
+    <type>varchar</type>
+    <length>255</length>
+    <comment>Connector description (by front end user)</comment>
+    <add>1.0</add>
+  </field>
+  <field>
+    <name>connector_type_id</name>
+    <title>Connector Type ID</title>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment></comment>
+    <add>1.0</add>
+  </field>
+  <foreignKey>
+    <name>connector_type_id</name>
+    <table>civicrm_connector_type</table>
+    <key>id</key>
+    <add>1.0</add>
+    <onDelete>RESTRICT</onDelete>
+  </foreignKey>
+  <field>
+    <name>is_active</name>
+    <type>boolean</type>
+    <comment>Is this the default connector of this type for this domain?</comment>
+      <add>1.0</add>
+  </field>
+  <field>
+    <name>is_default</name>
+    <type>boolean</type>
+    <comment>Is this the default connector of this type for this domain?</comment>
+    <add>1.0</add>
+  </field>
+  <field>
+    <name>contact_id</name>
+    <title>Contact ID</title>
+    <type>int unsigned</type>
+    <required>false</required>
+    <comment>Optional FK to Contact ID. Assume at some point might want per contact connectors</comment>
+    <add>1.0</add>
+  </field>
+  <foreignKey>
+    <name>contact_id</name>
+    <table>civicrm_contact</table>
+    <key>id</key>
+    <add>1.0</add>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+  <field>
+    <name>field1</name>
+    <type>varchar</type>
+    <length>255</length>
+    <comment>Storage field 1 to be defined by connector type</comment>
+    <add>1.0</add>
+  </field>
+  <field>
+    <name>field2</name>
+    <type>varchar</type>
+    <length>255</length>
+    <comment>Storage field 2 to be defined by connector type</comment>
+    <add>1.0</add>
+  </field>
+  <field>
+    <name>field3</name>
+    <type>varchar</type>
+    <length>255</length>
+    <comment>Storage field 3 to be defined by connector type</comment>
+    <add>1.0</add>
+  </field>
+  <field>
+    <name>field4</name>
+    <type>varchar</type>
+    <length>255</length>
+    <comment>Storage field 4 to be defined by connector type</comment>
+    <add>1.0</add>
+  </field>
+  <field>
+    <name>field5</name>
+    <type>test</type>
+    <length>255</length>
+    <comment>Storage field 5 (longer) to be defined by connector type</comment>
+    <add>1.0</add>
+  </field>
+</table>

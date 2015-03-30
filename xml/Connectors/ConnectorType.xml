@@ -24,6 +24,12 @@
     <comment>Connector Type name (default for creating a new connector)</comment>
     <add>1.0</add>
   </field>
+  <index>
+    <name>UI_name</name>
+    <fieldName>name</fieldName>
+    <unique>true</unique>
+    <add>2.1</add>
+  </index>
   <field>
     <name>description</name>
     <type>varchar</type>
@@ -34,24 +40,27 @@
   <field>
     <name>is_active</name>
     <type>boolean</type>
-    <comment>Is this the default connector of this type for this domain?</comment>
+    <comment>Is this connector type active?</comment>
     <add>1.0</add>
   </field>
   <field>
     <name>module</name>
-    <type>text</type>
-    <comment>Key of the module or extension?</comment>
+    <type>varchar</type>
+    <length>255</length>
+    <comment>Key of the module or extension</comment>
     <add>1.0</add>
   </field>
   <field>
     <name>function</name>
-    <type>text</type>
-    <comment>Sub-function see README for examples</comment>
+    <type>varchar</type>
+    <length>255</length>
+    <comment>Module function see README for examples</comment>
     <add>1.0</add>
   </field>
   <field>
     <name>plugin</name>
-    <type>text</type>
+    <type>varchar</type>
+    <length>255</length>
     <comment>Plugin - see README for examples</comment>
     <add>1.0</add>
   </field>
@@ -65,6 +74,8 @@
     <name>is_default</name>
     <type>boolean</type>
     <comment>Is this the default connector for this module?</comment>
+    <required>true</required>
+    <default>0</default>
     <add>1.0</add>
   </field>
   <field>
@@ -111,10 +122,10 @@
     <add>1.0</add>
   </field>
   <field>
-    <name>field5</name>
-    <type>test</type>
+    <name>field5_label</name>
+    <type>varchar</type>
     <length>255</length>
-    <comment>Label for storage field 5</comment>
+    <comment>Label for (text length) storage field 5</comment>
     <add>1.0</add>
   </field>
 </table>

@@ -51,7 +51,7 @@
     <title>Connector Type ID</title>
     <type>int unsigned</type>
     <required>true</required>
-    <comment></comment>
+    <comment>Connector type</comment>
     <add>1.0</add>
   </field>
   <foreignKey>
@@ -64,13 +64,17 @@
   <field>
     <name>is_active</name>
     <type>boolean</type>
+    <required>true</required>
+    <default>1</default>
     <comment>Is this the default connector of this type for this domain?</comment>
-      <add>1.0</add>
+    <add>1.0</add>
   </field>
   <field>
     <name>is_default</name>
     <type>boolean</type>
     <comment>Is this the default connector of this type for this domain?</comment>
+    <required>true</required>
+    <default>0</default>
     <add>1.0</add>
   </field>
   <field>

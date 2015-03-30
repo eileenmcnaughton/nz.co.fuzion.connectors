@@ -228,7 +228,9 @@ class CRM_Connectors_DAO_ConnectorType extends CRM_Core_DAO
         'is_active' => array(
           'name' => 'is_active',
           'type' => CRM_Utils_Type::T_BOOLEAN,
-          'description' => 'Is this the default connector of this type for this domain?',
+          'description' => 'Is this connector type active?',
+          'required' => TRUE,
+          'default' => 1,
         ) ,
         'module' => array(
           'name' => 'module',
@@ -240,7 +242,7 @@ class CRM_Connectors_DAO_ConnectorType extends CRM_Core_DAO
           'name' => 'function',
           'type' => CRM_Utils_Type::T_TEXT,
           'title' => ts('Function') ,
-          'description' => 'Sub-function see README for examples',
+          'description' => 'Module function see README for examples',
         ) ,
         'plugin' => array(
           'name' => 'plugin',
@@ -258,13 +260,15 @@ class CRM_Connectors_DAO_ConnectorType extends CRM_Core_DAO
           'name' => 'is_default',
           'type' => CRM_Utils_Type::T_BOOLEAN,
           'description' => 'Is this the default connector for this module?',
+          'required' => TRUE,
+          'default' => 0,
         ) ,
         'contact_id' => array(
           'name' => 'contact_id',
           'type' => CRM_Utils_Type::T_INT,
           'title' => ts('Contact ID') ,
           'description' => 'Optional FK to Contact ID. Assume at some point might want per contact connectors',
-          'required' => false,
+          'required' => FALSE,
           'FKClassName' => 'CRM_Contact_DAO_Contact',
         ) ,
         'field1_label' => array(

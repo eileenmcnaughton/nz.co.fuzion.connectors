@@ -305,7 +305,7 @@ class CRM_Connectors_DAO_ConnectorType extends CRM_Core_DAO
         ) ,
         'field5' => array(
           'name' => 'field5',
-          'type' => CRM_Utils_Type::T_TEST,
+          'type' => CRM_Utils_Type::T_TEXT,
           'title' => ts('Field5') ,
           'description' => 'Label for storage field 5',
         ) ,

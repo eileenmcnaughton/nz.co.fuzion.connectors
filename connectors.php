@@ -135,6 +135,24 @@ function connectors_civicrm_alter_drupal_entities(&$whitelist) {
 }
 
 /**
+ * Implements hook civicrm_entityTypes().
+ *
+ * @param array $entityTypes
+ */
+function connectors_civicrm_entityTypes(&$entityTypes) {
+  $entityTypes['CRM_Connectors_DAO_Connector'] = array(
+    'name' => 'Connector',
+    'class' => 'CRM_Connectors_DAO_Connector',
+    'table' => 'civicrm_connector',
+  );
+  $entityTypes['CRM_Connectors_DAO_ConnectorType'] = array(
+    'name' => 'ConnectorType',
+    'class' => 'CRM_Connectors_DAO_ConnectorType',
+    'table' => 'civicrm_connector_type',
+  );
+}
+
+/**
  * Implements hook civicrm_alter_drupal_entity_labels().
  *
  * We are not currently declaring the connector entity for fear that

@@ -22,4 +22,8 @@ class CRM_Connectors_BAO_Connector extends CRM_Connectors_DAO_Connector {
 
     return $instance;
   }
+
+  public static function buildOptions($fieldName, $context = NULL, $props = array()) {
+    return CRM_Core_PseudoConstant::get(__CLASS__, $fieldName, array(), $context);
+  }
 }

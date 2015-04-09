@@ -9,5 +9,5 @@
  */
 
 function _civicrm_api3_connector_DAO() {
-  return 'CRM_Connectors_BAO_Connector';
+  return 'CRM_Connectors_DAO_Connector';
 }

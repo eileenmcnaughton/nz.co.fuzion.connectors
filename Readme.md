@@ -58,3 +58,7 @@ For address management we might have
   plugin: usps
   
 
+Todo 
+
+- add UI for editing connectors
+- implement connector specific permissions

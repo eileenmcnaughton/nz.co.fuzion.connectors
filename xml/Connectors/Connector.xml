@@ -52,6 +52,11 @@
     <type>int unsigned</type>
     <required>true</required>
     <comment>Connector type</comment>
+    <pseudoconstant>
+      <table>civicrm_connector_type</table>
+      <keyColumn>id</keyColumn>
+      <labelColumn>display_name</labelColumn>
+    </pseudoconstant>
     <add>1.0</add>
   </field>
   <foreignKey>

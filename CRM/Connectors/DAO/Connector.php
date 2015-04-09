@@ -226,8 +226,13 @@ class CRM_Connectors_DAO_Connector extends CRM_Core_DAO
           'name' => 'connector_type_id',
           'type' => CRM_Utils_Type::T_INT,
           'title' => ts('Connector Type ID') ,
-          'required' => true,
+          'required' => TRUE,
           'FKClassName' => 'CRM_Connectors_DAO_ConnectorType',
+          'pseudoconstant' => array(
+            'table' => 'civicrm_connector_type',
+            'keyColumn' => 'id',
+            'labelColumn' => 'name',
+          ),
         ) ,
         'is_active' => array(
           'name' => 'is_active',
@@ -281,7 +286,7 @@ class CRM_Connectors_DAO_Connector extends CRM_Core_DAO
         ) ,
         'field5' => array(
           'name' => 'field5',
-          'type' => CRM_Utils_Type::T_TEST,
+          'type' => CRM_Utils_Type::T_TEXT,
           'title' => ts('Field5') ,
           'description' => 'Storage field 5 (longer) to be defined by connector type',
         ) ,

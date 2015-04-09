@@ -3,7 +3,7 @@ CREATE TABLE `civicrm_connector` (
   `domain_id` INT(10) UNSIGNED NULL DEFAULT NULL COMMENT 'Optional FK to Domain ID',
   `name` VARCHAR(64) NULL DEFAULT NULL COMMENT 'Connector name (by front end user)' COLLATE 'utf8_unicode_ci',
   `description` VARCHAR(255) NULL DEFAULT NULL COMMENT 'Connector description (by front end user).' COLLATE 'utf8_unicode_ci',
-  `payment_processor_type_id` INT(10) UNSIGNED NOT NULL COMMENT 'Connector type',
+  `connector_type_id` INT(10) UNSIGNED NOT NULL COMMENT 'Connector type',
   `is_active` TINYINT(4) NOT NULL DEFAULT 1 COMMENT 'Is this the default connector of this type for this domain?',
   `is_default` TINYINT(4) NOT NULL DEFAULT 0 COMMENT 'Is this the default connector of this type for this domain?',
   `contact_id` INT(10) UNSIGNED NULL DEFAULT NULL COMMENT 'Optional FK to Domain ID',

@@ -134,12 +134,7 @@ class CRM_Connectors_DAO_ConnectorType extends CRM_Core_DAO
    * @var boolean
    */
   public $is_default;
-  /**
-   * Optional FK to Contact ID. Assume at some point might want per contact connectors
-   *
-   * @var int unsigned
-   */
-  public $contact_id;
+
   /**
    * Label for storage field 1
    *
@@ -169,7 +164,7 @@ class CRM_Connectors_DAO_ConnectorType extends CRM_Core_DAO
    *
    * @var test
    */
-  public $field5;
+  public $field5_label;
   /**
    * class constructor
    *
@@ -263,14 +258,6 @@ class CRM_Connectors_DAO_ConnectorType extends CRM_Core_DAO
           'required' => TRUE,
           'default' => 0,
         ) ,
-        'contact_id' => array(
-          'name' => 'contact_id',
-          'type' => CRM_Utils_Type::T_INT,
-          'title' => ts('Contact ID') ,
-          'description' => 'Optional FK to Contact ID. Assume at some point might want per contact connectors',
-          'required' => FALSE,
-          'FKClassName' => 'CRM_Contact_DAO_Contact',
-        ) ,
         'field1_label' => array(
           'name' => 'field1_label',
           'type' => CRM_Utils_Type::T_STRING,
@@ -303,8 +290,8 @@ class CRM_Connectors_DAO_ConnectorType extends CRM_Core_DAO
           'maxlength' => 255,
           'size' => CRM_Utils_Type::HUGE,
         ) ,
-        'field5' => array(
-          'name' => 'field5',
+        'field5_label' => array(
+          'name' => 'field5_label',
           'type' => CRM_Utils_Type::T_TEXT,
           'title' => ts('Field5') ,
           'description' => 'Label for storage field 5',
@@ -332,12 +319,11 @@ class CRM_Connectors_DAO_ConnectorType extends CRM_Core_DAO
         'plugin' => 'plugin',
         'permissions' => 'permissions',
         'is_default' => 'is_default',
-        'contact_id' => 'contact_id',
         'field1_label' => 'field1_label',
         'field2_label' => 'field2_label',
         'field3_label' => 'field3_label',
         'field4_label' => 'field4_label',
-        'field5' => 'field5',
+        'field5_label' => 'field5_label',
       );
     }
     return self::$_fieldKeys;

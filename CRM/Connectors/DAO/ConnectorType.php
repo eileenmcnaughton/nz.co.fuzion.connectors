@@ -185,7 +185,6 @@ class CRM_Connectors_DAO_ConnectorType extends CRM_Core_DAO
   {
     if (!self::$_links) {
       self::$_links = static ::createReferenceColumns(__CLASS__);
-      self::$_links[] = new CRM_Core_Reference_Basic(self::getTableName() , 'contact_id', 'civicrm_contact', 'id');
     }
     return self::$_links;
   }

@@ -79,21 +79,6 @@
     <add>1.0</add>
   </field>
   <field>
-    <name>contact_id</name>
-    <title>Contact ID</title>
-    <type>int unsigned</type>
-    <required>false</required>
-    <comment>Optional FK to Contact ID. Assume at some point might want per contact connectors</comment>
-    <add>1.0</add>
-  </field>
-  <foreignKey>
-    <name>contact_id</name>
-    <table>civicrm_contact</table>
-    <key>id</key>
-    <add>1.0</add>
-    <onDelete>CASCADE</onDelete>
-  </foreignKey>
-  <field>
     <name>field1_label</name>
     <type>varchar</type>
     <length>255</length>

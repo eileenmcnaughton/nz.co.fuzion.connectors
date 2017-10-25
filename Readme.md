@@ -1,3 +1,7 @@
+TL:DR readme: An extension to support more than one Xero connection for one site. Basically you define 'these financial types should be pushed to the NGO Xero instance & those should be pushed to their for-profit company's Xero instance'
+
+Long readme:
+
 This extension exists to generate tables for storing credentials for external connectors. Not everything described
 is currently implemented.
 

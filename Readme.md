@@ -1,4 +1,4 @@
-TL:DR readme: An extension to support more than one Xero connection for one site. Basically you define 'these financial types should be pushed to the NGO Xero instance & those should be pushed to their for-profit company's Xero instance'
+TL:DR readme: An extension to support more than one AccountSync (e.g Xeo integration) connection for one site. Basically you define 'these financial types should be pushed to the NGO Xero instance & those should be pushed to their for-profit company's Xero instance'
 
 Long readme:
 

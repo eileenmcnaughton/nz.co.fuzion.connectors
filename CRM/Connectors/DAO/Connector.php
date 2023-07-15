@@ -278,10 +278,9 @@ class CRM_Connectors_DAO_Connector extends CRM_Core_DAO
         ) ,
         'field4' => array(
           'name' => 'field4',
-          'type' => CRM_Utils_Type::T_STRING,
+          'type' => CRM_Utils_Type::T_TEXT,
           'title' => ts('Field4') ,
           'description' => 'Storage field 4 to be defined by connector type',
-          'maxlength' => 255,
           'size' => CRM_Utils_Type::HUGE,
         ) ,
         'field5' => array(
